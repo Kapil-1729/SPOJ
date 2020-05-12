@@ -2,20 +2,15 @@
 using namespace std;
 void dfs(int s, vector<int> g[], bool vis[])
 {
-    
     vis[s]=true;
     for(int i=0;i<g[s].size();i++)
     {
         if(vis[g[s][i]]!=true)
         {
-            
             dfs(g[s][i],g,vis);
         }
     }
-
 }
-
-// { Driver Code Starts.
 
 int main()
 {
@@ -23,7 +18,6 @@ int main()
     cin>>T;
     while(T--)
     {
-
         int N, E;
         int result=0;
         cin>>N>>E;
@@ -49,9 +43,6 @@ int main()
 				dfs(i,g,vis);
 			}
 		}
-        
-        
     cout<<result<<endl;
-
     }
 } 
